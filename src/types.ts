@@ -6,6 +6,8 @@ export interface Product {
   amount: number;
 }
 
+export type ResponseProduct = Omit<Product, 'amount'>;
+
 export interface Stock {
   id: number;
   amount: number;
