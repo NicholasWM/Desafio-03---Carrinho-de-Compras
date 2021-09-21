@@ -64,8 +64,6 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       const cartItems = [...cart]
       const isCartItem = cartItems.find(cartItem => cartItem.id === productId)
       if(isCartItem){
-        console.log('Entrei');
-        
         newCart = cart.filter(cartItem=> cartItem?.id !== productId)
         setCart(newCart)
         localStorage.setItem('@RocketShoes:cart', JSON.stringify(newCart))
